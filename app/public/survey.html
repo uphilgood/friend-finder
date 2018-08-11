@@ -1,175 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <div class="jumbotron">
         <h1 class="display-4" style="text-align: center">Take the Survey!</h1>
-      <div class = "container">
-<form>
-   <div class="form-group">
-     
-                <label for="formGroupExampleInput">Name</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name" required>
-              <br/>
-       
-                <label for="formGroupExampleInput2">Photo</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Photo URL" required>
-                <br/>
-    <label for="exampleFormControlSelect1">How likely are to try new types of foods?</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option value=1>1 (very unlikely)</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option value=5>5 (very likely)</option>
-    </select>
-    <br/>
-    <label for="exampleFormControlSelect1">Do you like outdoor activities?</label>
-    <select class="form-control" id="exampleFormControlSelect2">
-      <option value=1>1 (not at all)</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option value=5>5 (very much)</option>
-    </select>
-    <br/>
-    <label for="exampleFormControlSelect1">How like sport?</label>
-    <select class="form-control" id="exampleFormControlSelect3">
-      <option value=1>1 (not at all)</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option value=5>5 (very much)</option>
-    </select>
-    <br/>
-    <label for="exampleFormControlSelect1">Do you like to drink?</label>
-    <select class="form-control" id="exampleFormControlSelect4">
-      <option value=1>1 (not at all)</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option value=5>5 (very much)</option>
-    </select>
-    <br/>
-    <label for="exampleFormControlSelect1">Do like meeting new people?</label>
-    <select class="form-control" id="exampleFormControlSelect5">
-      <option value=1>1 (not at all)</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option value=5>5 (very much)</option>
-    </select>
-    <br/>
-    <label for="exampleFormControlSelect1">Do you like movies?</label>
-    <select class="form-control" id="exampleFormControlSelect6">
-      <option value=1>1 (not at all)</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option value=5>5 (very much)</option>
-    </select>
-    <br/>
-    <label for="exampleFormControlSelect1">Do you enjoy video games?</label>
-    <select class="form-control" id="exampleFormControlSelect7">
-      <option value=1>1 (not at all)</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option value=5>5 (very much)</option>
-    </select>
-    <br/>
-    <label for="exampleFormControlSelect1">Do you like to workout?</label>
-    <select class="form-control" id="exampleFormControlSelect8">
-      <option value=1>1 (not at all)</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option value=5>5 (very much)</option>
-    </select>
-    <br/>
-    <label for="exampleFormControlSelect1">How likely are to try new things?</label>
-    <select class="form-control" id="exampleFormControlSelect9">
-      <option value=1>1 (very unlikely)</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option value=5>5 (very likely)</option>
-    </select>
-    <br/>
-    <label for="exampleFormControlSelect1">Do you enjoy animals?</label>
-    <select class="form-control" id="exampleFormControlSelect10">
-      <option value=1>1 (not at all)</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option value=5>5 (very much)</option>
-    </select>
-    <br/>
-    <button type="submit" class="btn btn-primary submit">Submit</button>
-  </div>
-</form>
-</div>
-</div>
+        <div class="container">
+            <form>
+                <div class="form-group">
+
+                    <label for="formGroupExampleInput">Name</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name" required>
+                    <br/>
+
+                    <label for="formGroupExampleInput2">Photo</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Photo URL" required>
+                    <br/>
+                    <label for="exampleFormControlSelect1">How likely are to try new types of foods?</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option value=1>1 (very unlikely)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option value=5>5 (very likely)</option>
+                    </select>
+                    <br/>
+                    <label for="exampleFormControlSelect1">Do you like outdoor activities?</label>
+                    <select class="form-control" id="exampleFormControlSelect2">
+                        <option value=1>1 (not at all)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option value=5>5 (very much)</option>
+                    </select>
+                    <br/>
+                    <label for="exampleFormControlSelect1">How like sport?</label>
+                    <select class="form-control" id="exampleFormControlSelect3">
+                        <option value=1>1 (not at all)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option value=5>5 (very much)</option>
+                    </select>
+                    <br/>
+                    <label for="exampleFormControlSelect1">Do you like to drink?</label>
+                    <select class="form-control" id="exampleFormControlSelect4">
+                        <option value=1>1 (not at all)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option value=5>5 (very much)</option>
+                    </select>
+                    <br/>
+                    <label for="exampleFormControlSelect1">Do like meeting new people?</label>
+                    <select class="form-control" id="exampleFormControlSelect5">
+                        <option value=1>1 (not at all)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option value=5>5 (very much)</option>
+                    </select>
+                    <br/>
+                    <label for="exampleFormControlSelect1">Do you like movies?</label>
+                    <select class="form-control" id="exampleFormControlSelect6">
+                        <option value=1>1 (not at all)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option value=5>5 (very much)</option>
+                    </select>
+                    <br/>
+                    <label for="exampleFormControlSelect1">Do you enjoy video games?</label>
+                    <select class="form-control" id="exampleFormControlSelect7">
+                        <option value=1>1 (not at all)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option value=5>5 (very much)</option>
+                    </select>
+                    <br/>
+                    <label for="exampleFormControlSelect1">Do you like to workout?</label>
+                    <select class="form-control" id="exampleFormControlSelect8">
+                        <option value=1>1 (not at all)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option value=5>5 (very much)</option>
+                    </select>
+                    <br/>
+                    <label for="exampleFormControlSelect1">How likely are to try new things?</label>
+                    <select class="form-control" id="exampleFormControlSelect9">
+                        <option value=1>1 (very unlikely)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option value=5>5 (very likely)</option>
+                    </select>
+                    <br/>
+                    <label for="exampleFormControlSelect1">Do you enjoy animals?</label>
+                    <select class="form-control" id="exampleFormControlSelect10">
+                        <option value=1>1 (not at all)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option value=5>5 (very much)</option>
+                    </select>
+                    <br/>
+                    <button type="submit" class="btn btn-primary submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 <script>
-    $(".submit").on("click", function(event) {
-      event.preventDefault();
+    $(".submit").on("click", function (event) {
+        event.preventDefault();
 
-      // Here we grab the form elements
-      var newFriend = {
-        name: $("#formGroupExampleInput").val().trim(),
-        photo: $("#formGroupExampleInput2").val().trim(),
-        score: [parseInt($("#exampleFormControlSelect1").val().trim()), parseInt($("#exampleFormControlSelect2").val().trim()), parseInt($("#exampleFormControlSelect3").val().trim()),
-        parseInt($("#exampleFormControlSelect4").val().trim()), parseInt($("#exampleFormControlSelect5").val().trim()), parseInt($("#exampleFormControlSelect6").val().trim()), parseInt($("#exampleFormControlSelect7").val().trim()),
-        parseInt($("#exampleFormControlSelect8").val().trim()), parseInt($("#exampleFormControlSelect9").val().trim()), parseInt($("#exampleFormControlSelect10").val().trim())]
-      };
+        // Here we grab the form elements
+        var newFriend = {
+            name: $("#formGroupExampleInput").val().trim(),
+            photo: $("#formGroupExampleInput2").val().trim(),
+            scores: [parseInt($("#exampleFormControlSelect1").val().trim()), parseInt($(
+                    "#exampleFormControlSelect2").val().trim()), parseInt($(
+                    "#exampleFormControlSelect3").val().trim()),
+                parseInt($("#exampleFormControlSelect4").val().trim()), parseInt($(
+                    "#exampleFormControlSelect5").val().trim()), parseInt($(
+                    "#exampleFormControlSelect6").val().trim()), parseInt($(
+                    "#exampleFormControlSelect7").val().trim()),
+                parseInt($("#exampleFormControlSelect8").val().trim()), parseInt($(
+                    "#exampleFormControlSelect9").val().trim()), parseInt($(
+                    "#exampleFormControlSelect10").val().trim())
+            ]
+        };
 
-      console.log(newFriend);
+        console.log(newFriend);
 
-      $.post("/api/friends", newFriend,
-        function(data) {
-            console.log(data)
-        });
+        $.post("/api/friends", newFriend,
+            function (data) {
+                console.log(data)
+            });
 
-
+        findFriend()
     });
 
     function findFriend() {
 
-// Here we get the location of the root page.
-// We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
-var currentURL = window.location.origin;
+        // Here we get the location of the root page.
+        // We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
+        var currentURL = window.location.origin;
+        var newArr = []
+        var compArr = []
+        var fullArry = []
+        var trueArry = []
 
-// The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
-$.ajax({ url: currentURL + "/api/friends", method: "GET" })
-  .then(function(data) {
+        // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+        $.ajax({
+                url: currentURL + "/api/friends",
+                method: "GET"
+            })
+            .then(function (data) {
 
-  // Here we are logging the URL so we have access to it for troubleshooting
-    console.log("------------------------------------");
-    console.log("URL: " + currentURL + "/api/friends");
-    console.log("------------------------------------");
+                // Here we are logging the URL so we have access to it for troubleshooting
+                console.log("------------------------------------");
+                console.log("URL: " + currentURL + "/api/friends");
+                console.log("------------------------------------");
 
-    // Here we then log the NYTData to console, where it will show up as an object.
-    console.log(data);
-    console.log("------------------------------------");
+                console.log(data);
+                console.log("------------------------------------");
 
-    // Loop through and display each of the customers
-    for (var i = 0; i < data.length-1; i++) {
+                data[data.length - 1].scores.forEach(num => {
+                    newArr.push(num)
+                })
 
- 
+                intArr = newArr.map(num => parseInt(num, 10));
+
+                // loop through the list of friends
+                data.forEach(each => {
+                    add = 0
+                    compArr = []
+                    // loop through each score for each friend
+                    for (var i = 0; i < each.scores.length; i++) {
+                        compArr.push(Math.abs(each.scores[i] - intArr[i]))
+                    }
+                    compArr.forEach(sum => {
+                        add += sum
+                    })
+                    fullArry.push(add)
+                    trueArry.push(add)
+
+                })
+                sortedArr = fullArry.sort(function (a, b) {
+                    return a - b;
+                });
+                console.log(sortedArr)
+                console.log(trueArry)
+                console.log(data[trueArry.indexOf(sortedArr[1])].name)
+
+            });
     }
-  });
-}
 </script>
-</html>
 
+</html>
