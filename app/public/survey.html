@@ -25,11 +25,11 @@
                 <div class="form-group">
 
                     <label for="formGroupExampleInput">Name</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name" required>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name" required="true">
                     <br/>
 
                     <label for="formGroupExampleInput2">Photo</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Photo URL" required>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Photo URL" required="true">
                     <br/>
                     <label for="exampleFormControlSelect1">How likely are to try new types of foods?</label>
                     <select class="form-control" id="exampleFormControlSelect1">
@@ -121,9 +121,26 @@
                         <option value=5>5 (very much)</option>
                     </select>
                     <br/>
-                    <button type="submit" class="btn btn-primary submit">Submit</button>
+                    <button type="submit" class="btn btn-primary submit" data-toggle="modal" data-target="#exampleModal">Submit</button>
                 </div>
             </form>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Say hello to your new friend!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
@@ -135,31 +152,17 @@
         var newFriend = {
             name: $("#formGroupExampleInput").val().trim(),
             photo: $("#formGroupExampleInput2").val().trim(),
-            scores: [parseInt($("#exampleFormControlSelect1").val().trim()), parseInt($(
-                    "#exampleFormControlSelect2").val().trim()), parseInt($(
-                    "#exampleFormControlSelect3").val().trim()),
-                parseInt($("#exampleFormControlSelect4").val().trim()), parseInt($(
-                    "#exampleFormControlSelect5").val().trim()), parseInt($(
-                    "#exampleFormControlSelect6").val().trim()), parseInt($(
-                    "#exampleFormControlSelect7").val().trim()),
-                parseInt($("#exampleFormControlSelect8").val().trim()), parseInt($(
-                    "#exampleFormControlSelect9").val().trim()), parseInt($(
-                    "#exampleFormControlSelect10").val().trim())
-            ]
+            scores: [$("#exampleFormControlSelect1").val().trim(), $("#exampleFormControlSelect2").val().trim(), $("#exampleFormControlSelect3").val().trim(), $("#exampleFormControlSelect4").val().trim(), $("#exampleFormControlSelect5").val().trim(), $("#exampleFormControlSelect6").val().trim(), $("#exampleFormControlSelect7").val().trim(), $("#exampleFormControlSelect8").val().trim(), $("#exampleFormControlSelect9").val().trim(), $("#exampleFormControlSelect10").val().trim()]
         };
-
-        console.log(newFriend);
 
         $.post("/api/friends", newFriend,
             function (data) {
                 console.log(data)
             });
-
         findFriend()
     });
 
     function findFriend() {
-
         // Here we get the location of the root page.
         // We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
         var currentURL = window.location.origin;
@@ -174,19 +177,11 @@
                 method: "GET"
             })
             .then(function (data) {
-
-                // Here we are logging the URL so we have access to it for troubleshooting
-                console.log("------------------------------------");
-                console.log("URL: " + currentURL + "/api/friends");
-                console.log("------------------------------------");
-
-                console.log(data);
-                console.log("------------------------------------");
-
+                //first grab an array of all the newly entered scores
                 data[data.length - 1].scores.forEach(num => {
                     newArr.push(num)
                 })
-
+                //my scores
                 intArr = newArr.map(num => parseInt(num, 10));
 
                 // loop through the list of friends
@@ -210,8 +205,24 @@
                 console.log(sortedArr)
                 console.log(trueArry)
                 console.log(data[trueArry.indexOf(sortedArr[1])].name)
+                $(".modal-body").text(data[trueArry.indexOf(sortedArr[1])].name)
+                $(".modal-body").prepend('<img id="theImg" src="' + data[trueArry.indexOf(sortedArr[1])].photo +
+                    '" height="150" width="150"/>')
 
             });
+
+        $("#formGroupExampleInput").val('')
+        $("#formGroupExampleInput2").val('')
+        $("#exampleFormControlSelect1").val('')
+        $("#exampleFormControlSelect2").val('')
+        $("#exampleFormControlSelect3").val('')
+        $("#exampleFormControlSelect4").val('')
+        $("#exampleFormControlSelect5").val('')
+        $("#exampleFormControlSelect6").val('')
+        $("#exampleFormControlSelect7").val('')
+        $("#exampleFormControlSelect8").val('')
+        $("#exampleFormControlSelect9").val('')
+        $("#exampleFormControlSelect10").val('')
     }
 </script>
 
